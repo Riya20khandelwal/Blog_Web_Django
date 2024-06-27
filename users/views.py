@@ -14,7 +14,7 @@ def sign_up(request):
             print("vvvvvvvvvvvvv")
             form.save()
             print(1111111111111)
-            return redirect('blog-index')
+            return redirect('users-login')
 
     else:
         print("vbbbbbbbbbbbbbbbbbbbbbbb")
@@ -25,3 +25,7 @@ def sign_up(request):
     }
     print("sssssssssssss")
     return render(request, 'users/sign_up.html', context)
+
+
+def profile(request):
+    return render(request, 'users/profile.html')

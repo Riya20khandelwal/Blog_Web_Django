@@ -9,8 +9,16 @@ class SignUpForm(UserCreationForm):
         model = User
         fields=['username','email','password1','password2']
 
-    def __init__(self):
-        super(SignUpForm, self).__init__()
+    # def __init__(self):
+    #     super(SignUpForm, self).__init__()
 
-        for fieldname in ['username','email','password1','password2']:
+    #     for fieldname in ['username','email','password1','password2']:
+    #         self.fields[fieldname].help_text = None
+
+    def __init__(self, *args, **kwargs):
+        super(SignUpForm, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'email', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
+
+
