@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +116,7 @@ USE_TZ = True
 
 # CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -130,6 +131,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (BASE_DIR / 'media')
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 STATIC_ROOT = (BASE_DIR / 'asset')
 
